@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ПОДТЯНИ ЖИВОТ ЗА 2 НЕДЕЛИ</title>
+</head>
+
+<body class="page">
+    <header class="header">
+        <h1 class="title">видеокурс<br>"подтяни живот за 2 недели"</h1>
+        <p class="subtitle">Методы быстрой и безопасной коррекции фигуры</p>
+    </header>
+    <main class="main">
+        <div class="content">
+            <div class="content__col">
+                <h2 class="content__title">Содержание курса:</h2>
+                <ul class="content__list">
+                    <li class="list__item">
+                        <h3 class="list__title">Урок №1:</h3>
+                        Выстраивание геометрии живота
+                    </li>
+                    <li class="list__item">
+                        <h3 class="list__title">Урок №2:</h3>
+                        Спиральная гимнастика для активизации тонуса мышц живота для красивой осанки
+                    </li>
+                    <li class="list__item">
+                        <h3 class="list__title">Урок №3:</h3>
+                        Каскадные техники для укрепления верха и низа живота для нормализации обмена веществ
+                    </li>
+                    <li class="list__item">
+                        <h3 class="list__title">Урок №4:</h3>
+                        Глубинная гимнастика для улучшения работы внутренних органов брюшной полости и органов малого таза
+                    </li>
+                    <li class="list__item">
+                        <h3 class="list__title">Урок №5:</h3>
+                        Компенсирующие техники для укрепления спины и от болей в пояснице
+                    </li>
+                </ul>
+            </div>
+            <div class="content__col">
+                <div class="box__img"></div>
+                <h2 class="rest">до конца предложения осталось:</h2>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="buy">
+            <p class="new-price">1 800 руб.</p>
+            <p class="old-price">370 руб.</p>
+            <button class="buy__btn">оформить заявку</button>
+        </div>
+        <div class="stock">
+            <div id="countdown" class="countdown">
+                    <div class="countdown-number">
+                        <span class="hours countdown-time"></span>:
+                    </div>
+                    <div class="countdown-number">
+                        <span class="minutes countdown-time"></span>:
+                    </div>
+                    <div class="countdown-number">
+                        <span class="seconds countdown-time"></span>
+                    </div>
+            </div>
+            <button class="buy__btn">оформить заявку</button>
+
+        </div>
+        </div>
+    </footer>
+
+    <script>
+        function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            var seconds = Math.floor((t / 1000) % 60);
+            var minutes = Math.floor((t / 1000 / 60) % 60);
+            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+            return {
+                total: t,
+                hours: hours,
+                minutes: minutes,
+                seconds: seconds
+            };
+        }
+
+        function initializeClock(id, endtime) {
+            var clock = document.getElementById(id);
+            var hoursSpan = clock.querySelector(".hours");
+            var minutesSpan = clock.querySelector(".minutes");
+            var secondsSpan = clock.querySelector(".seconds");
+
+            function updateClock() {
+                var t = getTimeRemaining(endtime);
+
+                if (t.total <= 0) {
+                    clearInterval(timeinterval);
+                }
+
+                hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
+                minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+                secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+            }
+
+            updateClock();
+            var timeinterval = setInterval(updateClock, 1000);
+        }
+
+        var deadline = new Date(Date.parse(new Date()) + 63 * 60 * 1000);
+        initializeClock("countdown", deadline);
+    </script>
+</body>
+
+</html>
