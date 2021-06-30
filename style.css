@@ -4,8 +4,10 @@
   font-family: "Bitter", serif;
   max-width: 1440px;
   margin: 0 auto;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 6px 3px rgba(151, 151, 151, 0.589);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(151, 151, 151, 0.589);
+          box-shadow: 0px 0px 6px 3px rgba(151, 151, 151, 0.589);
 }
 .header {
   text-align: center;
@@ -26,15 +28,25 @@
   margin: 0 auto;
 }
 .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
 .content__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 50%;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .content__title {
   font-size: 40px;
@@ -48,7 +60,8 @@
 .list__item {
   list-style: none;
   font-size: 24px;
-  box-shadow: 0px 0px 10px 1px #005163ba;
+  -webkit-box-shadow: 0px 0px 10px 1px #005163ba;
+          box-shadow: 0px 0px 10px 1px #005163ba;
   padding: 10px;
   border-radius: 10px;
 }
@@ -74,16 +87,27 @@
   margin: 0;
 }
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 80%;
   margin: 0 auto;
   padding: 20px;
 }
 .buy {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 50%;
 }
 .new-price {
@@ -110,19 +134,30 @@
   background-color: #ffe365;
   border: none;
   border-radius: 23px;
-  box-shadow: 0 0 8px 0px #696569;
+  -webkit-box-shadow: 0 0 8px 0px #696569;
+          box-shadow: 0 0 8px 0px #696569;
   cursor: pointer;
   text-transform: uppercase;
 }
 .buy__btn:hover {
-  box-shadow: 0 0 8px 3px #9fdaf3;
+  -webkit-box-shadow: 0 0 8px 3px #9fdaf3;
+          box-shadow: 0 0 8px 3px #9fdaf3;
   background-color: #ffd310;
 }
 .stock {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 50%;
 }
 .countdown {
@@ -155,11 +190,15 @@
   }
   .main {
     padding: 5px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 100%;
   }
   .content {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 0px;
   }
   .content__col {
@@ -179,8 +218,13 @@
     margin-top: 10px;
   }
   .footer {
-    flex-direction: column-reverse;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0;
     width: 100%;
     background-image: url(./images/box.png);
@@ -196,7 +240,8 @@
     background-color: #636060a8;
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 0 0 6px 4px #636060a8;
+    -webkit-box-shadow: 0 0 6px 4px #636060a8;
+            box-shadow: 0 0 6px 4px #636060a8;
   }
   .old-price {
     font-size: 30px;
@@ -208,13 +253,19 @@
     width: 100%;
   }
   .countdown {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-size: 30px;
     padding: 0;
   }
   .countdown-number {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-left: -5px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
